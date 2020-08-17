@@ -1,0 +1,195 @@
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* font-face */
+
+@font-face {
+    font-family: 'Beautiful Every Time';
+    src: url(/assets/fonts/beautiful_every_time/BeautifulEveryTime.ttf);
+}
+
+
+.top-bar {
+    width: 100%;
+    height: 5vh;
+    background: url(../../assets/img/top-bar.png) no-repeat center;
+    background-size: cover;
+}
+
+.bodyContainer {
+    width: 100%;
+    height: 100vh;
+    background: url(../../assets/img/bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+
+.bodyContainer .title {
+    padding: 40px 0px;
+    font-size: 65px;
+    color: #ffffff;
+    font-family: "Beautiful Every Time";
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: transform 0.5s ease 0s;
+}
+
+.whiteCircle{
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background: #FFF;
+    border-radius: 50%;
+    padding: 29px 35px;
+}
+.whiteCircle:hover{
+    opacity: 0.5;
+}
+
+.whiteCircle .circ-icon img{
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s ease 0s;
+}
+
+.whiteCircle .circ-icon img:hover{
+    transform: rotate(180deg);
+}
+
+.whiteCircle h5.circ-desc{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* progress bar styles starts from here */
+.ProgressBar {
+    margin: 0 auto;
+    padding: 2em 0 3em;
+    list-style: none;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background: transparent!important;
+}
+
+.ProgressBar-step {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.ProgressBar-step:before,
+.ProgressBar-step:after {
+    content: "";
+    height: 1em;
+    background-color: #cb0000;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: -50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.ProgressBar-step:first-child:before,
+.ProgressBar-step:first-child:after {
+    display: none;
+}
+
+.resetandmovebtn{
+    width: 300px;
+    margin: 0 auto;
+}
+.resetandmovebtn:hover{
+    opacity: 1;
+}
+.ProgressBar-step:after {
+    background-color: rgb(204, 74, 74);
+    width: 0%;
+}
+.resetandmovebtn  button{
+    background: rgba(255,255,255, 0.5);
+    border:1px solid rgba(255,255,255, 0.1);
+    border-radius: 23px;
+    padding: 0px 30px;
+}
+
+.ProgressBar-step.is-complete+.ProgressBar-step.is-current:after,
+.ProgressBar-step.is-complete+.ProgressBar-step.is-complete:after {
+    width: 100%;
+}
+
+.ProgressBar-icon {
+    opacity: 0;
+    width: 0.5em;
+    height: 1.5em;
+    background-color: #a07b7b;
+    fill: #cb0000;
+    padding: 0em;
+    max-width: 100%;
+    z-index: 10;
+    position: relative;
+    bottom: 6px;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.is-current .ProgressBar-icon {
+    opacity: 1;
+    fill: #cb0000;
+    background-color: #cb0000;
+}
+
+.is-complete .ProgressBar-icon {
+    opacity: 0;
+    fill: #cb0000;
+    background-color: #cb0000
+}
+
+.ProgressBar-stepLabel {
+    display: block;
+    text-transform: uppercase;
+    color: #cb0000;
+    position: absolute;
+    padding-top: 0.5em;
+    width: 100%;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.is-current>.ProgressBar-stepLabel,
+.is-complete>.ProgressBar-stepLabel {
+    color: #cb0000;
+}
+
+.wrapper {
+    margin: 2em auto;
+    font-size: 16px;
+}
+
+button.try-btn{
+    width: 200px;
+    margin: 20px auto;
+    background: #FFF;
+    opacity: 0.5;
+    padding: 10px;
+}
+
+button.try-btn:hover{
+    opacity: 1;
+}

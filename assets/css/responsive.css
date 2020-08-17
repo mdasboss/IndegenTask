@@ -1,0 +1,12 @@
+@media only screen and (max-width: 600px) {
+    .bodyContainer .title{
+        padding: 20px 0px;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: "Beautiful Every Time";
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+  }
